@@ -1,0 +1,25 @@
+From dd9c33c1e96794bffc7417b7482d86a02f39219b Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Sun, 11 Aug 2024 19:19:57 +0800
+Subject: [PATCH] install
+
+---
+ src/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index f8e76ec..8eaf232 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -68,7 +68,7 @@ find_package(Qt5Sql REQUIRED)
+ 
+ # # generate ui_*.h files
+ # qt5_wrap_ui(${CMAKE_PROJECT_NAME}_FORMS ${UI_FILES})
+-
++include_directories(${CMAKE_INSTALL_PREFIX}/include)
+ include_directories(
+     ${CMAKE_CURRENT_BINARY_DIR} # config.h
+     ${CMAKE_SOURCE_DIR}/external/qcustomplot
+-- 
+2.43.4
+
